@@ -1,4 +1,4 @@
-﻿using System.Data.Common;
+using System.Data.Common;
 
 class Board
 {
@@ -110,7 +110,7 @@ class Game
     }
     public void PlaceShips()
     {
-        int counter = 3;
+        int counter = 0;
         while(counter < 4)
         {
             currentPlayer.displayBoard.DisplayBoard();
@@ -127,7 +127,7 @@ class Game
             }
         }
         string field1, field2;
-        counter = 2;
+        counter = 0;
         while (counter < 3)
         {
             currentPlayer.displayBoard.DisplayBoard();
@@ -153,7 +153,7 @@ class Game
                     Console.Clear(); Console.WriteLine("You can't place your ship here.");}
             }else{ Console.Clear(); Console.WriteLine("You can't place your ship here.");}
         }
-        counter = 1;
+        counter = 0;
         while (counter < 2)
         {
             currentPlayer.displayBoard.DisplayBoard();
@@ -524,9 +524,10 @@ class Program
                 Console.WriteLine("Player 1 Won!!!");
                 player1.win++;
             }
+
             Console.Write("Current ratio: \nPlayer 1: " + player1.win + "\nPlayer 2: " + player2.win + "\nIf you want to play again click ENTER: \n");
             Console.ReadLine();
-
+            Console.Clear();
         }
     }
 }
